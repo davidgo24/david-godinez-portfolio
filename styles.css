@@ -1,25 +1,16 @@
 :root {
-  /* UC Berkeley palette */
-  --berkeley-blue: #003262;
-  --berkeley-blue-mid: #1a5080;
-  --berkeley-blue-light: #3b7ea1;
+  /* Berkeley gold accent on white/black base */
   --california-gold: #fdb515;
   --california-gold-deep: #c4820e;
-  --california-gold-soft: #fff3d6;
+  --california-gold-soft: #fff8eb;
 
-  /* Medium cool-neutral base */
-  --bg: #e9eef3;
-  --bg-muted: #dde5ee;
-  --ink: #12263a;
-  --ink-muted: #4a5f73;
+  --bg: #ffffff;
+  --bg-muted: #f5f5f5;
+  --ink: #111111;
+  --ink-muted: #555555;
   --card: #ffffff;
-  --line: rgba(0, 50, 98, 0.1);
-  --accent: var(--berkeley-blue);
-  --accent-mid: var(--berkeley-blue-mid);
-  --accent-soft: #d4e4f2;
-  --impact-soft: #dceaf4;
-  --highlight: var(--california-gold-deep);
-  --shadow: 0 10px 32px rgba(0, 50, 98, 0.08);
+  --line: rgba(0, 0, 0, 0.1);
+  --shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
   --radius: 14px;
   --serif: "Libre Baskerville", Georgia, "Times New Roman", serif;
   --sans: "Source Sans 3", system-ui, sans-serif;
@@ -42,17 +33,7 @@ body {
   font-size: 1.05rem;
   line-height: 1.65;
   color: var(--ink);
-  background:
-    linear-gradient(180deg, #f2f5f9 0%, var(--bg) 240px),
-    linear-gradient(
-      90deg,
-      transparent 0%,
-      transparent 49.5%,
-      rgba(0, 50, 98, 0.04) 49.5%,
-      rgba(0, 50, 98, 0.04) 50.5%,
-      transparent 50.5%
-    );
-  background-color: var(--bg);
+  background: var(--bg);
 }
 
 img {
@@ -61,7 +42,7 @@ img {
 }
 
 a {
-  color: var(--berkeley-blue-mid);
+  color: var(--ink);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
@@ -70,13 +51,9 @@ a:hover {
   color: var(--california-gold-deep);
 }
 
-.text-blue {
-  color: var(--berkeley-blue-mid);
-  font-weight: 600;
-}
-
-.text-berkeley {
-  color: var(--berkeley-blue);
+.text-ink {
+  color: var(--ink);
+  font-weight: 700;
 }
 
 .text-gold {
@@ -93,7 +70,7 @@ a:hover {
   position: absolute;
   left: -9999px;
   top: 0;
-  background: var(--berkeley-blue);
+  background: var(--ink);
   color: white;
   padding: 0.75rem 1rem;
   z-index: 100;
@@ -111,7 +88,7 @@ a:hover {
   top: 0;
   z-index: 50;
   backdrop-filter: blur(10px);
-  background: rgba(233, 238, 243, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   border-bottom: 1px solid var(--line);
 }
 
@@ -126,14 +103,14 @@ a:hover {
 .wordmark {
   font-family: var(--serif);
   font-size: 1.35rem;
-  color: var(--berkeley-blue);
+  color: var(--ink);
   text-decoration: none;
   letter-spacing: -0.01em;
   font-weight: 700;
 }
 
 .wordmark-accent {
-  color: var(--berkeley-blue-mid);
+  color: var(--ink-muted);
   font-weight: 400;
 }
 
@@ -152,21 +129,20 @@ a:hover {
 
 .site-nav a:hover,
 .site-nav .nav-cta {
-  color: var(--berkeley-blue);
+  color: var(--ink);
 }
 
 .site-nav .nav-cta {
   padding: 0.45rem 0.9rem;
-  border: 1px solid rgba(0, 50, 98, 0.18);
+  border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--card);
-  box-shadow: 0 2px 8px rgba(0, 50, 98, 0.06);
 }
 
 .menu-toggle {
   border: 1px solid var(--line);
   background: var(--card);
-  color: var(--berkeley-blue);
+  color: var(--ink);
   border-radius: 999px;
   padding: 0.45rem 0.9rem;
   font: inherit;
@@ -179,7 +155,7 @@ a:hover {
   gap: 0.25rem;
   padding: 0 1rem 1rem;
   border-bottom: 1px solid var(--line);
-  background: rgba(233, 238, 243, 0.98);
+  background: #fff;
 }
 
 .mobile-nav[hidden] {
@@ -189,7 +165,7 @@ a:hover {
 .mobile-nav a {
   display: block;
   padding: 0.75rem 0;
-  color: var(--berkeley-blue);
+  color: var(--ink);
   text-decoration: none;
   font-weight: 600;
 }
@@ -240,12 +216,12 @@ a:hover {
   font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.02em;
-  color: var(--berkeley-blue);
+  color: var(--ink);
 }
 
 .hero h1 em {
   font-style: italic;
-  color: var(--berkeley-blue-light);
+  color: var(--ink-muted);
 }
 
 .lede {
@@ -278,26 +254,26 @@ a:hover {
 }
 
 .btn-primary {
-  background: var(--berkeley-blue);
+  background: var(--ink);
   color: #fff;
   box-shadow: var(--shadow);
 }
 
 .btn-primary:hover {
   color: #fff;
-  background: var(--berkeley-blue-mid);
+  background: #333;
 }
 
 .btn-ghost {
   background: var(--card);
-  color: var(--berkeley-blue);
-  border-color: rgba(0, 50, 98, 0.16);
+  color: var(--ink);
+  border-color: var(--line);
 }
 
 .btn-ghost:hover {
   background: var(--california-gold-soft);
-  color: var(--berkeley-blue);
-  border-color: rgba(196, 130, 14, 0.25);
+  color: var(--ink);
+  border-color: rgba(196, 130, 14, 0.35);
 }
 
 .hero-aside {
@@ -329,26 +305,13 @@ a:hover {
   line-height: 1.5;
 }
 
-/* Focus card — subtle blue wash */
 .stat-focus {
-  background: linear-gradient(135deg, #f4f8fc, var(--card));
-  border-color: rgba(0, 50, 98, 0.12);
+  background: var(--bg);
 }
 
-.stat-focus .stat-label {
-  color: var(--berkeley-blue-mid);
-}
-
-/* Berkeley education card */
 .stat-berkeley {
-  background: linear-gradient(135deg, #e8f1fa 0%, #f7fafd 55%, var(--card) 100%);
-  border: 1px solid rgba(0, 50, 98, 0.16);
-  border-left: 4px solid var(--berkeley-blue);
-  box-shadow: 0 8px 24px rgba(0, 50, 98, 0.1);
-}
-
-.stat-berkeley .stat-label {
-  color: var(--berkeley-blue);
+  background: var(--bg);
+  border-left: 4px solid var(--california-gold);
 }
 
 .stat-berkeley p {
@@ -356,15 +319,13 @@ a:hover {
   font-size: 1.02rem;
 }
 
-/* Recent impact — ice blue + gold metrics */
 .stat-impact {
-  background: linear-gradient(145deg, var(--impact-soft) 0%, #edf4fa 45%, #f8fbfd 100%);
-  border: 1px solid rgba(59, 126, 161, 0.22);
-  box-shadow: 0 8px 28px rgba(59, 126, 161, 0.12);
+  background: var(--california-gold-soft);
+  border: 1px solid rgba(196, 130, 14, 0.22);
 }
 
 .stat-impact .stat-label {
-  color: var(--berkeley-blue-light);
+  color: var(--california-gold-deep);
 }
 
 .stat-impact .text-gold {
@@ -408,7 +369,7 @@ a:hover {
   font-size: clamp(1.9rem, 3vw, 2.6rem);
   font-weight: 700;
   line-height: 1.15;
-  color: var(--berkeley-blue);
+  color: var(--ink);
 }
 
 .section-intro {
@@ -456,11 +417,6 @@ a:hover {
   border-radius: var(--radius);
   padding: 1.25rem 1.35rem;
   box-shadow: var(--shadow);
-  transition: border-color 0.15s ease;
-}
-
-.timeline-item:hover {
-  border-color: rgba(0, 50, 98, 0.2);
 }
 
 @media (min-width: 760px) {
@@ -475,7 +431,7 @@ a:hover {
   display: block;
   font-size: 0.88rem;
   font-weight: 700;
-  color: var(--berkeley-blue-mid);
+  color: var(--ink-muted);
   line-height: 1.4;
 }
 
@@ -483,12 +439,12 @@ a:hover {
   margin: 0 0 0.2rem;
   font-size: 1.12rem;
   line-height: 1.35;
-  color: var(--berkeley-blue);
+  color: var(--ink);
 }
 
 .org {
   margin: 0 0 0.75rem;
-  color: var(--berkeley-blue-light);
+  color: var(--ink-muted);
   font-size: 0.95rem;
   font-weight: 600;
 }
@@ -529,12 +485,6 @@ a:hover {
   border-radius: calc(var(--radius) + 2px);
   padding: 1.35rem;
   box-shadow: var(--shadow);
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
-}
-
-.project-card:hover {
-  border-color: rgba(0, 50, 98, 0.18);
-  box-shadow: 0 14px 36px rgba(0, 50, 98, 0.1);
 }
 
 .project-type {
@@ -552,7 +502,7 @@ a:hover {
   font-family: var(--serif);
   font-size: 1.45rem;
   line-height: 1.2;
-  color: var(--berkeley-blue);
+  color: var(--ink);
 }
 
 .project-problem,
@@ -564,7 +514,7 @@ a:hover {
 
 .project-problem strong,
 .project-solution strong {
-  color: var(--berkeley-blue);
+  color: var(--ink);
 }
 
 .project-metrics {
@@ -572,9 +522,9 @@ a:hover {
   gap: 0.65rem;
   margin: 0 0 1rem;
   padding: 0.85rem;
-  background: linear-gradient(145deg, var(--impact-soft), #f5f9fc);
+  background: var(--bg-muted);
   border-radius: 10px;
-  border: 1px solid rgba(59, 126, 161, 0.18);
+  border: 1px solid var(--line);
 }
 
 .project-metrics div {
@@ -587,7 +537,7 @@ a:hover {
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--berkeley-blue-light);
+  color: var(--ink-muted);
 }
 
 .project-metrics dd {
@@ -614,15 +564,16 @@ a:hover {
   font-weight: 700;
   padding: 0.25rem 0.55rem;
   border-radius: 999px;
-  background: rgba(0, 50, 98, 0.08);
-  color: var(--berkeley-blue);
+  background: var(--bg-muted);
+  color: var(--ink);
+  border: 1px solid var(--line);
 }
 
 .project-link {
   margin-top: auto;
   font-weight: 700;
   text-decoration: none;
-  color: var(--berkeley-blue-mid);
+  color: var(--ink);
 }
 
 .project-link:hover {
@@ -652,13 +603,13 @@ a:hover {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 10px;
-  border-left: 3px solid var(--berkeley-blue);
+  border-left: 3px solid var(--california-gold);
 }
 
 .skill-grid strong {
   display: block;
   margin-bottom: 0.2rem;
-  color: var(--berkeley-blue);
+  color: var(--ink);
 }
 
 .skill-grid span {
@@ -686,8 +637,8 @@ a:hover {
   display: grid;
   gap: 1.5rem;
   padding: 2rem;
-  background: linear-gradient(135deg, var(--berkeley-blue) 0%, #0a2848 100%);
-  color: #f4f8fa;
+  background: var(--ink);
+  color: #f5f5f5;
   border-radius: calc(var(--radius) + 4px);
   box-shadow: var(--shadow);
   border-bottom: 4px solid var(--california-gold);
@@ -710,7 +661,7 @@ a:hover {
 
 .contact-grid p {
   margin: 0;
-  color: rgba(244, 248, 250, 0.88);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .contact-grid .section-num {
@@ -738,7 +689,7 @@ a:hover {
 .site-footer {
   padding: 1.5rem 0 2rem;
   border-top: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.45);
+  background: var(--bg);
 }
 
 .site-footer p {
@@ -754,6 +705,6 @@ a:hover {
   height: 0.55rem;
   margin-right: 0.45rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--berkeley-blue), var(--california-gold));
+  background: var(--california-gold);
   vertical-align: middle;
 }
