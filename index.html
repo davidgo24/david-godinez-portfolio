@@ -11,155 +11,198 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/david-godinez-portfolio/styles.css" />
   </head>
   <body>
-    <div class="page">
-      <header class="site-header">
-        <div class="header-top">
-          <h1 class="wordmark">David Godinez</h1>
-          <div class="header-contact">
+    <div class="grain" aria-hidden="true"></div>
+
+    <div class="shell">
+      <aside class="index" aria-label="Site index">
+        <div class="index-inner">
+          <div class="index-brand">
+            <span class="monogram" aria-hidden="true">DG</span>
+            <h1 class="wordmark">David Godinez</h1>
+            <p class="tagline">Public sector analyst · LA County</p>
+          </div>
+
+          <nav class="index-nav" aria-label="Sections">
+            <button class="nav-item is-active" type="button" data-panel="about" aria-selected="true">
+              <span class="nav-num">01</span>
+              <span class="nav-label">About</span>
+            </button>
+            <button class="nav-item" type="button" data-panel="resume" aria-selected="false">
+              <span class="nav-num">02</span>
+              <span class="nav-label">Resume</span>
+            </button>
+            <button class="nav-item" type="button" data-panel="projects" aria-selected="false">
+              <span class="nav-num">03</span>
+              <span class="nav-label">Projects</span>
+            </button>
+            <span class="nav-indicator" id="nav-indicator" aria-hidden="true"></span>
+          </nav>
+
+          <div class="index-footer">
             <a href="mailto:godinez_david@lacoe.edu">godinez_david@lacoe.edu</a>
             <a href="https://github.com/davidgo24" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="tel:+16264665679">(626) 466-5679</a>
           </div>
         </div>
-        <p class="tagline">Public sector analyst · LA County · Bilingual (EN / ES)</p>
-      </header>
+      </aside>
 
-      <nav class="tab-nav" aria-label="Sections">
-        <button class="tab is-active" type="button" data-panel="about" aria-selected="true">
-          About
-        </button>
-        <button class="tab" type="button" data-panel="resume" aria-selected="false">Resume</button>
-        <button class="tab" type="button" data-panel="projects" aria-selected="false">
-          Projects
-        </button>
-      </nav>
-
-      <main class="panel-area">
-        <section id="panel-about" class="panel is-visible" aria-labelledby="tab-about">
+      <main class="stage">
+        <section id="panel-about" class="panel is-active" aria-labelledby="nav-about">
+          <header class="panel-head">
+            <p class="panel-eyebrow">01 — About</p>
+            <h2 class="panel-title">A little about me.</h2>
+          </header>
           <p class="lead">
             I support payroll, HR, and finance systems for public agencies — and build
             small tools when the workflow needs one. Research the problem, fix it, document
             it.
           </p>
-          <ul class="chips">
-            <li class="chip chip-gold">
-              <span class="chip-label">Education</span>
-              <span class="chip-value">UC Berkeley · B.A. Legal Studies</span>
+          <ul class="highlights">
+            <li class="highlight">
+              <span class="highlight-key">Education</span>
+              <span class="highlight-val">
+                <em>UC Berkeley</em> · B.A. Legal Studies
+              </span>
             </li>
-            <li class="chip">
-              <span class="chip-label">Focus</span>
-              <span class="chip-value">Program analysis · ERP · compliance</span>
+            <li class="highlight">
+              <span class="highlight-key">Focus</span>
+              <span class="highlight-val">Program analysis · ERP · compliance</span>
             </li>
-            <li class="chip chip-gold">
-              <span class="chip-label">Recent impact</span>
-              <span class="chip-value"><strong>100+ hrs/yr</strong> saved on payroll workflows</span>
+            <li class="highlight highlight-accent">
+              <span class="highlight-key">Recent impact</span>
+              <span class="highlight-val">
+                <strong>100+ hrs/yr</strong> saved on payroll workflows
+              </span>
             </li>
           </ul>
         </section>
 
-        <section id="panel-resume" class="panel" hidden aria-labelledby="tab-resume">
+        <section id="panel-resume" class="panel" hidden aria-labelledby="nav-resume">
+          <header class="panel-head">
+            <p class="panel-eyebrow">02 — Resume</p>
+            <h2 class="panel-title">Where I've worked.</h2>
+          </header>
           <ol class="resume-list">
             <li>
-              <div class="resume-head">
-                <h2>Administrative Specialist — HR &amp; Payroll Apps Support</h2>
-                <time datetime="2026-04">Apr 2026 — Present</time>
+              <div class="resume-row">
+                <time class="resume-date" datetime="2026-04">2026 —</time>
+                <div class="resume-body">
+                  <h3>Administrative Specialist — HR &amp; Payroll Apps Support</h3>
+                  <p class="resume-org">LA County Office of Education</p>
+                  <p>On-site ERP specialist during school-district payroll &amp; HR migration.</p>
+                </div>
               </div>
-              <p class="resume-org">LA County Office of Education, Technology Services</p>
-              <p>On-site ERP specialist during school-district payroll &amp; HR migration.</p>
             </li>
             <li>
-              <div class="resume-head">
-                <h2>Finance Technician</h2>
-                <time datetime="2026-01/2026-04">Jan — Apr 2026</time>
+              <div class="resume-row">
+                <time class="resume-date" datetime="2026-01/2026-04">2026</time>
+                <div class="resume-body">
+                  <h3>Finance Technician</h3>
+                  <p class="resume-org">City of Montebello, Transit</p>
+                  <p>Payroll data for 130 employees; ERP access &amp; workflow optimization.</p>
+                </div>
               </div>
-              <p class="resume-org">City of Montebello, Transit Department</p>
-              <p>Payroll data for 130 employees; ERP access control &amp; workflow optimization.</p>
             </li>
             <li>
-              <div class="resume-head">
-                <h2>Accounting Technician</h2>
-                <time datetime="2025-01/2025-06">Jan — Jun 2025</time>
+              <div class="resume-row">
+                <time class="resume-date" datetime="2025-01/2025-06">2025</time>
+                <div class="resume-body">
+                  <h3>Accounting Technician</h3>
+                  <p class="resume-org">City of Manhattan Beach</p>
+                  <p>Tyler Munis ERP, bank reconciliations, vendor payment tracking.</p>
+                </div>
               </div>
-              <p class="resume-org">City of Manhattan Beach, Finance</p>
-              <p>Tyler Munis ERP support, bank reconciliations, vendor payment tracking.</p>
             </li>
             <li>
-              <div class="resume-head">
-                <h2>Foreign Currency Analyst</h2>
-                <time datetime="2022-06/2023-09">Jun 2022 — Sep 2023</time>
+              <div class="resume-row">
+                <time class="resume-date" datetime="2022-06/2023-09">2022</time>
+                <div class="resume-body">
+                  <h3>Foreign Currency Analyst</h3>
+                  <p class="resume-org">City National Bank</p>
+                  <p>FX market analysis; spot, forward, and swap execution.</p>
+                </div>
               </div>
-              <p class="resume-org">City National Bank</p>
-              <p>FX market analysis; spot, forward, and swap transaction execution.</p>
             </li>
             <li>
-              <div class="resume-head">
-                <h2>Community Outreach Banker</h2>
-                <time datetime="2017-03/2022-07">Mar 2017 — Jul 2022</time>
+              <div class="resume-row">
+                <time class="resume-date" datetime="2017-03/2022-07">2017</time>
+                <div class="resume-body">
+                  <h3>Community Outreach Banker</h3>
+                  <p class="resume-org">MUFG Union Bank</p>
+                  <p>500+ financial literacy participants · President's Award (2019).</p>
+                </div>
               </div>
-              <p class="resume-org">MUFG Union Bank</p>
-              <p>500+ financial literacy participants; President's Award (2019).</p>
             </li>
           </ol>
         </section>
 
-        <section id="panel-projects" class="panel" hidden aria-labelledby="tab-projects">
+        <section id="panel-projects" class="panel" hidden aria-labelledby="nav-projects">
+          <header class="panel-head">
+            <p class="panel-eyebrow">03 — Projects</p>
+            <h2 class="panel-title">Things I built at work.</h2>
+          </header>
           <ul class="project-list">
-            <li class="project-item">
-              <div class="project-top">
-                <h2>Time Exception Slip Automation</h2>
-                <span class="project-stat">4+ hrs → ~20 min / pay period</span>
-              </div>
-              <p>Pre-filled PDF slips &amp; OT Excel export for ~128 transit employees.</p>
-              <div class="project-meta">
-                <span>Python · Flask</span>
-                <a
-                  href="https://github.com/davidgo24/time-exception-slip-tool"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub →</a
-                >
-              </div>
+            <li>
+              <a
+                class="project-card is-link"
+                href="https://github.com/davidgo24/time-exception-slip-tool"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="project-card-top">
+                  <h3>Time Exception Slip Automation</h3>
+                  <span class="project-arrow" aria-hidden="true">→</span>
+                </div>
+                <p>Pre-filled PDF slips &amp; OT Excel export for ~128 employees.</p>
+                <div class="project-foot">
+                  <span class="project-stat">4+ hrs → ~20 min</span>
+                  <span class="project-tags">Python · Flask</span>
+                </div>
+              </a>
             </li>
-            <li class="project-item">
-              <div class="project-top">
-                <h2>DOS Data Entry CLI</h2>
-                <span class="project-stat">Keyboard-first TCP export</span>
-              </div>
-              <p>Parse DOS Excel reports and export TimeClock Plus-ready segments.</p>
-              <div class="project-meta">
-                <span>Python · Flask</span>
-                <a
-                  href="https://github.com/davidgo24/dos_data_entry_cli"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub →</a
-                >
-              </div>
+            <li>
+              <a
+                class="project-card is-link"
+                href="https://github.com/davidgo24/dos_data_entry_cli"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="project-card-top">
+                  <h3>DOS Data Entry CLI</h3>
+                  <span class="project-arrow" aria-hidden="true">→</span>
+                </div>
+                <p>Parse DOS Excel reports → TimeClock Plus-ready export.</p>
+                <div class="project-foot">
+                  <span class="project-stat">Keyboard-first</span>
+                  <span class="project-tags">Python · Flask</span>
+                </div>
+              </a>
             </li>
-            <li class="project-item">
-              <div class="project-top">
-                <h2>Missing Slip — Automated Outreach</h2>
-                <span class="project-stat">M365 low-code</span>
-              </div>
-              <p>Power Automate flow emails ops manager when a time exception slip is missing.</p>
-              <div class="project-meta">
-                <span>SharePoint · Power Automate · Outlook</span>
-                <span class="project-internal">Internal · Montebello Transit</span>
-              </div>
+            <li>
+              <article class="project-card">
+                <div class="project-card-top">
+                  <h3>Missing Slip — Automated Outreach</h3>
+                </div>
+                <p>Power Automate emails ops when a time exception slip is missing.</p>
+                <div class="project-foot">
+                  <span class="project-stat">M365 low-code</span>
+                  <span class="project-tags">SharePoint · Power Automate</span>
+                </div>
+              </article>
             </li>
           </ul>
         </section>
-      </main>
 
-      <footer class="site-footer">
-        <p>© <span id="year"></span> David Godinez</p>
-        <a href="tel:+16264665679">(626) 466-5679</a>
-      </footer>
+        <footer class="stage-footer">
+          <p>© <span id="year"></span> David Godinez · Bilingual EN / ES</p>
+        </footer>
+      </main>
     </div>
 
     <script src="/david-godinez-portfolio/script.js"></script>
