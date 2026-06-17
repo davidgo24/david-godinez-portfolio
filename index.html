@@ -54,6 +54,7 @@
 
       <main class="stage">
         <section id="panel-about" class="panel is-active" aria-labelledby="nav-about">
+          <div class="panel-sheet">
           <header class="panel-head">
             <p class="panel-eyebrow">01 — About</p>
             <h2 class="panel-title">A little about me.</h2>
@@ -81,122 +82,146 @@
               </span>
             </li>
           </ul>
+          </div>
         </section>
 
         <section id="panel-resume" class="panel" hidden aria-labelledby="nav-resume">
+          <div class="panel-sheet">
           <header class="panel-head">
             <p class="panel-eyebrow">02 — Resume</p>
             <h2 class="panel-title">Where I've worked.</h2>
+            <p class="panel-hint">Tap a role to read more — one at a time.</p>
           </header>
-          <ol class="resume-list">
-            <li>
-              <div class="resume-row">
+          <ol class="resume-accordion">
+            <li class="resume-entry is-open">
+              <button type="button" class="resume-trigger" aria-expanded="true">
                 <time class="resume-date" datetime="2026-04">2026 —</time>
-                <div class="resume-body">
-                  <h3>Administrative Specialist — HR &amp; Payroll Apps Support</h3>
-                  <p class="resume-org">LA County Office of Education</p>
-                  <p>On-site ERP specialist during school-district payroll &amp; HR migration.</p>
-                </div>
+                <span class="resume-trigger-title">Administrative Specialist — HR &amp; Payroll Apps Support</span>
+                <span class="resume-chevron" aria-hidden="true"></span>
+              </button>
+              <div class="resume-panel">
+                <p class="resume-org">LA County Office of Education</p>
+                <p>On-site ERP specialist during school-district payroll &amp; HR migration.</p>
               </div>
             </li>
-            <li>
-              <div class="resume-row">
+            <li class="resume-entry">
+              <button type="button" class="resume-trigger" aria-expanded="false">
                 <time class="resume-date" datetime="2026-01/2026-04">2026</time>
-                <div class="resume-body">
-                  <h3>Finance Technician</h3>
-                  <p class="resume-org">City of Montebello, Transit</p>
-                  <p>Payroll data for 130 employees; ERP access &amp; workflow optimization.</p>
-                </div>
+                <span class="resume-trigger-title">Finance Technician</span>
+                <span class="resume-chevron" aria-hidden="true"></span>
+              </button>
+              <div class="resume-panel" hidden>
+                <p class="resume-org">City of Montebello, Transit</p>
+                <p>Payroll data for 130 employees; ERP access &amp; workflow optimization.</p>
               </div>
             </li>
-            <li>
-              <div class="resume-row">
+            <li class="resume-entry">
+              <button type="button" class="resume-trigger" aria-expanded="false">
                 <time class="resume-date" datetime="2025-01/2025-06">2025</time>
-                <div class="resume-body">
-                  <h3>Accounting Technician</h3>
-                  <p class="resume-org">City of Manhattan Beach</p>
-                  <p>Tyler Munis ERP, bank reconciliations, vendor payment tracking.</p>
-                </div>
+                <span class="resume-trigger-title">Accounting Technician</span>
+                <span class="resume-chevron" aria-hidden="true"></span>
+              </button>
+              <div class="resume-panel" hidden>
+                <p class="resume-org">City of Manhattan Beach</p>
+                <p>Tyler Munis ERP, bank reconciliations, vendor payment tracking.</p>
               </div>
             </li>
-            <li>
-              <div class="resume-row">
+            <li class="resume-entry">
+              <button type="button" class="resume-trigger" aria-expanded="false">
                 <time class="resume-date" datetime="2022-06/2023-09">2022</time>
-                <div class="resume-body">
-                  <h3>Foreign Currency Analyst</h3>
-                  <p class="resume-org">City National Bank</p>
-                  <p>FX market analysis; spot, forward, and swap execution.</p>
-                </div>
+                <span class="resume-trigger-title">Foreign Currency Analyst</span>
+                <span class="resume-chevron" aria-hidden="true"></span>
+              </button>
+              <div class="resume-panel" hidden>
+                <p class="resume-org">City National Bank</p>
+                <p>FX market analysis; spot, forward, and swap execution.</p>
               </div>
             </li>
-            <li>
-              <div class="resume-row">
+            <li class="resume-entry">
+              <button type="button" class="resume-trigger" aria-expanded="false">
                 <time class="resume-date" datetime="2017-03/2022-07">2017</time>
-                <div class="resume-body">
-                  <h3>Community Outreach Banker</h3>
-                  <p class="resume-org">MUFG Union Bank</p>
-                  <p>500+ financial literacy participants · President's Award (2019).</p>
-                </div>
+                <span class="resume-trigger-title">Community Outreach Banker</span>
+                <span class="resume-chevron" aria-hidden="true"></span>
+              </button>
+              <div class="resume-panel" hidden>
+                <p class="resume-org">MUFG Union Bank</p>
+                <p>500+ financial literacy participants · President's Award (2019).</p>
               </div>
             </li>
           </ol>
+          </div>
         </section>
 
         <section id="panel-projects" class="panel" hidden aria-labelledby="nav-projects">
+          <div class="panel-sheet">
           <header class="panel-head">
             <p class="panel-eyebrow">03 — Projects</p>
             <h2 class="panel-title">Things I built at work.</h2>
+            <p class="panel-hint">Use arrows to browse — one project at a time.</p>
           </header>
-          <ul class="project-list">
-            <li>
-              <a
-                class="project-card is-link"
-                href="https://github.com/davidgo24/time-exception-slip-tool"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div class="project-card-top">
-                  <h3>Time Exception Slip Automation</h3>
-                  <span class="project-arrow" aria-hidden="true">→</span>
-                </div>
-                <p>Pre-filled PDF slips &amp; OT Excel export for ~128 employees.</p>
-                <div class="project-foot">
-                  <span class="project-stat">4+ hrs → ~20 min</span>
-                  <span class="project-tags">Python · Flask</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a
-                class="project-card is-link"
-                href="https://github.com/davidgo24/dos_data_entry_cli"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div class="project-card-top">
-                  <h3>DOS Data Entry CLI</h3>
-                  <span class="project-arrow" aria-hidden="true">→</span>
-                </div>
-                <p>Parse DOS Excel reports → TimeClock Plus-ready export.</p>
-                <div class="project-foot">
-                  <span class="project-stat">Keyboard-first</span>
-                  <span class="project-tags">Python · Flask</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <article class="project-card">
-                <div class="project-card-top">
-                  <h3>Missing Slip — Automated Outreach</h3>
-                </div>
-                <p>Power Automate emails ops when a time exception slip is missing.</p>
-                <div class="project-foot">
-                  <span class="project-stat">M365 low-code</span>
-                  <span class="project-tags">SharePoint · Power Automate</span>
-                </div>
-              </article>
-            </li>
-          </ul>
+          <div class="project-stepper" id="project-stepper">
+            <div class="project-viewport">
+              <div class="project-slide is-active" data-index="0">
+                <a
+                  class="project-card is-link"
+                  href="https://github.com/davidgo24/time-exception-slip-tool"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div class="project-card-top">
+                    <h3>Time Exception Slip Automation</h3>
+                    <span class="project-arrow" aria-hidden="true">→</span>
+                  </div>
+                  <p>Pre-filled PDF slips &amp; OT Excel export for ~128 employees.</p>
+                  <div class="project-foot">
+                    <span class="project-stat">4+ hrs → ~20 min</span>
+                    <span class="project-tags">Python · Flask</span>
+                  </div>
+                </a>
+              </div>
+              <div class="project-slide" data-index="1" hidden>
+                <a
+                  class="project-card is-link"
+                  href="https://github.com/davidgo24/dos_data_entry_cli"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div class="project-card-top">
+                    <h3>DOS Data Entry CLI</h3>
+                    <span class="project-arrow" aria-hidden="true">→</span>
+                  </div>
+                  <p>Parse DOS Excel reports → TimeClock Plus-ready export.</p>
+                  <div class="project-foot">
+                    <span class="project-stat">Keyboard-first</span>
+                    <span class="project-tags">Python · Flask</span>
+                  </div>
+                </a>
+              </div>
+              <div class="project-slide" data-index="2" hidden>
+                <article class="project-card">
+                  <div class="project-card-top">
+                    <h3>Missing Slip — Automated Outreach</h3>
+                  </div>
+                  <p>Power Automate emails ops when a time exception slip is missing.</p>
+                  <div class="project-foot">
+                    <span class="project-stat">M365 low-code</span>
+                    <span class="project-tags">SharePoint · Power Automate</span>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="project-controls">
+              <button type="button" class="step-btn" id="project-prev" aria-label="Previous project">←</button>
+              <div class="step-dots" id="project-dots" aria-hidden="true">
+                <span class="step-dot is-active"></span>
+                <span class="step-dot"></span>
+                <span class="step-dot"></span>
+              </div>
+              <span class="step-count" id="project-count" aria-live="polite">1 / 3</span>
+              <button type="button" class="step-btn" id="project-next" aria-label="Next project">→</button>
+            </div>
+          </div>
+          </div>
         </section>
 
         <footer class="stage-footer">

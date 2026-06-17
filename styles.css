@@ -280,6 +280,26 @@ a:hover {
   display: block;
 }
 
+.panel.is-entering {
+  animation: panelIn 0.4s var(--ease) both;
+}
+
+.panel-sheet {
+  padding: 1.5rem 1.35rem 1.75rem;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 14px 44px rgba(0, 50, 98, 0.06);
+}
+
+.panel-hint {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  color: var(--blue-faint);
+  font-weight: 500;
+}
+
 @keyframes panelIn {
   from {
     opacity: 0;
@@ -388,38 +408,52 @@ a:hover {
   font-weight: 700;
 }
 
-/* Resume */
+/* Resume accordion */
 
-.resume-list {
+.resume-accordion {
   list-style: none;
   margin: 0;
   padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.resume-list > li {
+.resume-entry {
   border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.resume-entry:last-child {
+  border-bottom: none;
+}
+
+.resume-entry.is-open {
+  background: var(--gold-soft);
+}
+
+.resume-trigger {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr auto;
+  gap: 0.65rem 0.85rem;
+  align-items: center;
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: none;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  color: var(--blue);
+  cursor: pointer;
   transition: background 0.2s ease;
 }
 
-.resume-list > li:first-child {
-  border-top: 1px solid var(--line);
+.resume-trigger:hover {
+  background: rgba(0, 50, 98, 0.03);
 }
 
-.resume-list > li:hover {
-  background: rgba(0, 50, 98, 0.02);
-}
-
-.resume-row {
-  display: grid;
-  gap: 0.75rem 1.25rem;
-  padding: 1.15rem 0;
-}
-
-@media (min-width: 540px) {
-  .resume-row {
-    grid-template-columns: 4.5rem 1fr;
-    align-items: start;
-  }
+.resume-entry.is-open .resume-trigger {
+  background: transparent;
 }
 
 .resume-date {
@@ -427,40 +461,145 @@ a:hover {
   font-size: 0.78rem;
   font-weight: 500;
   color: var(--gold-deep);
-  padding-top: 0.15rem;
 }
 
-.resume-body h3 {
-  margin: 0 0 0.2rem;
+.resume-trigger-title {
   font-family: var(--serif);
-  font-size: 1.02rem;
+  font-size: 0.98rem;
   font-weight: 700;
   line-height: 1.35;
-  color: var(--blue);
 }
 
-.resume-org {
+.resume-chevron {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-right: 2px solid var(--gold-deep);
+  border-bottom: 2px solid var(--gold-deep);
+  transform: rotate(45deg);
+  transition: transform 0.25s var(--ease);
+  margin-right: 0.15rem;
+}
+
+.resume-entry.is-open .resume-chevron {
+  transform: rotate(-135deg);
+}
+
+.resume-panel {
+  padding: 0 1rem 1rem 4.35rem;
+  animation: panelIn 0.3s var(--ease) both;
+}
+
+.resume-panel p {
   margin: 0 0 0.35rem;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--blue-faint);
-}
-
-.resume-body p:last-child {
-  margin: 0;
   font-size: 0.92rem;
   color: var(--blue-soft);
   line-height: 1.55;
 }
 
-/* Projects */
+.resume-panel p:last-child {
+  margin-bottom: 0;
+}
 
-.project-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.resume-panel .resume-org {
+  font-weight: 600;
+  color: var(--blue-faint);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 520px) {
+  .resume-trigger {
+    grid-template-columns: 2.75rem 1fr auto;
+    gap: 0.5rem;
+    padding: 0.85rem 0.85rem;
+  }
+
+  .resume-panel {
+    padding-left: 1rem;
+  }
+}
+
+/* Projects stepper */
+
+.project-stepper {
   display: grid;
+  gap: 1rem;
+}
+
+.project-viewport {
+  position: relative;
+  min-height: 11rem;
+}
+
+.project-slide {
+  animation: panelIn 0.35s var(--ease) both;
+}
+
+.project-slide[hidden] {
+  display: none;
+}
+
+.project-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 0.85rem;
+}
+
+.step-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #fff;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--blue);
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.step-btn:hover:not(:disabled) {
+  border-color: var(--gold);
+  background: var(--gold-soft);
+  color: var(--gold-deep);
+}
+
+.step-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.step-dots {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.step-dot {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--line);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.step-dot.is-active {
+  background: var(--gold);
+  transform: scale(1.25);
+}
+
+.step-count {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--blue-faint);
+  min-width: 2.5rem;
+  text-align: center;
 }
 
 .project-card {
