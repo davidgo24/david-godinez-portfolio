@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
@@ -21,7 +21,7 @@
 
     <header class="site-header">
       <div class="container header-inner">
-        <a class="wordmark" href="#">David Godinez</a>
+        <a class="wordmark" href="#">David <span class="wordmark-accent">Godinez</span></a>
         <nav class="site-nav" aria-label="Primary">
           <a href="#about">About</a>
           <a href="#experience">Experience</a>
@@ -72,17 +72,26 @@
             </div>
           </div>
           <aside class="hero-aside" aria-label="At a glance">
-            <div class="stat-card">
+            <div class="stat-card stat-focus">
               <span class="stat-label">Focus</span>
-              <p>Program analysis · fiscal compliance · process improvement</p>
+              <p>
+                <span class="text-blue">Program analysis</span> · fiscal compliance ·
+                process improvement
+              </p>
             </div>
-            <div class="stat-card">
+            <div class="stat-card stat-berkeley">
               <span class="stat-label">Education</span>
-              <p>UC Berkeley — B.A. Legal Studies</p>
+              <p>
+                <strong class="text-berkeley">UC Berkeley</strong> —
+                <span class="text-gold">B.A. Legal Studies</span>
+              </p>
             </div>
-            <div class="stat-card accent">
+            <div class="stat-card stat-impact">
               <span class="stat-label">Recent impact</span>
-              <p><strong>100+ hours</strong> saved annually on municipal payroll workflows through custom automation</p>
+              <p>
+                <strong class="text-gold">100+ hours</strong> saved annually on municipal
+                payroll workflows through custom automation
+              </p>
             </div>
           </aside>
         </div>
@@ -221,11 +230,11 @@
               <dl class="project-metrics">
                 <div>
                   <dt>Time per pay period</dt>
-                  <dd>4+ hrs → ~20 min</dd>
+                  <dd class="metric-highlight">4+ hrs → ~20 min</dd>
                 </div>
                 <div>
                   <dt>Annual savings</dt>
-                  <dd>100+ hours</dd>
+                  <dd class="metric-highlight">100+ hours</dd>
                 </div>
                 <div>
                   <dt>Accuracy</dt>

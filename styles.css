@@ -1,16 +1,27 @@
 :root {
-  --bg: #f6f3ed;
-  --bg-muted: #ece8e0;
-  --ink: #1a1814;
-  --ink-muted: #5c574f;
-  --accent: #1a4f63;
-  --accent-soft: #d8e8ee;
-  --highlight: #b85c38;
-  --line: rgba(26, 24, 20, 0.1);
-  --card: #fffdf9;
-  --shadow: 0 12px 40px rgba(26, 24, 20, 0.06);
+  /* UC Berkeley palette */
+  --berkeley-blue: #003262;
+  --berkeley-blue-mid: #1a5080;
+  --berkeley-blue-light: #3b7ea1;
+  --california-gold: #fdb515;
+  --california-gold-deep: #c4820e;
+  --california-gold-soft: #fff3d6;
+
+  /* Medium cool-neutral base */
+  --bg: #e9eef3;
+  --bg-muted: #dde5ee;
+  --ink: #12263a;
+  --ink-muted: #4a5f73;
+  --card: #ffffff;
+  --line: rgba(0, 50, 98, 0.1);
+  --accent: var(--berkeley-blue);
+  --accent-mid: var(--berkeley-blue-mid);
+  --accent-soft: #d4e4f2;
+  --impact-soft: #dceaf4;
+  --highlight: var(--california-gold-deep);
+  --shadow: 0 10px 32px rgba(0, 50, 98, 0.08);
   --radius: 14px;
-  --serif: "Instrument Serif", Georgia, serif;
+  --serif: "Libre Baskerville", Georgia, "Times New Roman", serif;
   --sans: "Source Sans 3", system-ui, sans-serif;
   --max: 1120px;
 }
@@ -32,12 +43,14 @@ body {
   line-height: 1.65;
   color: var(--ink);
   background:
-    linear-gradient(180deg, #faf8f4 0%, var(--bg) 220px),
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 27px,
-      rgba(26, 24, 20, 0.025) 28px
+    linear-gradient(180deg, #f2f5f9 0%, var(--bg) 240px),
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      transparent 49.5%,
+      rgba(0, 50, 98, 0.04) 49.5%,
+      rgba(0, 50, 98, 0.04) 50.5%,
+      transparent 50.5%
     );
   background-color: var(--bg);
 }
@@ -48,13 +61,27 @@ img {
 }
 
 a {
-  color: var(--accent);
+  color: var(--berkeley-blue-mid);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
 
 a:hover {
-  color: var(--highlight);
+  color: var(--california-gold-deep);
+}
+
+.text-blue {
+  color: var(--berkeley-blue-mid);
+  font-weight: 600;
+}
+
+.text-berkeley {
+  color: var(--berkeley-blue);
+}
+
+.text-gold {
+  color: var(--california-gold-deep);
+  font-weight: 700;
 }
 
 .container {
@@ -66,7 +93,7 @@ a:hover {
   position: absolute;
   left: -9999px;
   top: 0;
-  background: var(--accent);
+  background: var(--berkeley-blue);
   color: white;
   padding: 0.75rem 1rem;
   z-index: 100;
@@ -84,7 +111,7 @@ a:hover {
   top: 0;
   z-index: 50;
   backdrop-filter: blur(10px);
-  background: rgba(246, 243, 237, 0.88);
+  background: rgba(233, 238, 243, 0.92);
   border-bottom: 1px solid var(--line);
 }
 
@@ -99,9 +126,15 @@ a:hover {
 .wordmark {
   font-family: var(--serif);
   font-size: 1.35rem;
-  color: var(--ink);
+  color: var(--berkeley-blue);
   text-decoration: none;
   letter-spacing: -0.01em;
+  font-weight: 700;
+}
+
+.wordmark-accent {
+  color: var(--berkeley-blue-mid);
+  font-weight: 400;
 }
 
 .site-nav {
@@ -114,28 +147,30 @@ a:hover {
   color: var(--ink-muted);
   text-decoration: none;
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .site-nav a:hover,
 .site-nav .nav-cta {
-  color: var(--accent);
+  color: var(--berkeley-blue);
 }
 
 .site-nav .nav-cta {
   padding: 0.45rem 0.9rem;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(0, 50, 98, 0.18);
   border-radius: 999px;
   background: var(--card);
+  box-shadow: 0 2px 8px rgba(0, 50, 98, 0.06);
 }
 
 .menu-toggle {
   border: 1px solid var(--line);
   background: var(--card);
-  color: var(--ink);
+  color: var(--berkeley-blue);
   border-radius: 999px;
   padding: 0.45rem 0.9rem;
   font: inherit;
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -144,6 +179,7 @@ a:hover {
   gap: 0.25rem;
   padding: 0 1rem 1rem;
   border-bottom: 1px solid var(--line);
+  background: rgba(233, 238, 243, 0.98);
 }
 
 .mobile-nav[hidden] {
@@ -153,9 +189,9 @@ a:hover {
 .mobile-nav a {
   display: block;
   padding: 0.75rem 0;
-  color: var(--ink);
+  color: var(--berkeley-blue);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 @media (min-width: 768px) {
@@ -191,24 +227,25 @@ a:hover {
 .eyebrow {
   margin: 0 0 1rem;
   font-size: 0.82rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--highlight);
+  color: var(--california-gold-deep);
 }
 
 .hero h1 {
   margin: 0 0 1.25rem;
   font-family: var(--serif);
   font-size: clamp(2.4rem, 5vw, 3.8rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.02em;
+  color: var(--berkeley-blue);
 }
 
 .hero h1 em {
   font-style: italic;
-  color: var(--accent);
+  color: var(--berkeley-blue-light);
 }
 
 .lede {
@@ -230,10 +267,10 @@ a:hover {
   justify-content: center;
   padding: 0.8rem 1.2rem;
   border-radius: 999px;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   border: 1px solid transparent;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
 .btn:hover {
@@ -241,20 +278,26 @@ a:hover {
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: var(--berkeley-blue);
   color: #fff;
   box-shadow: var(--shadow);
 }
 
 .btn-primary:hover {
   color: #fff;
-  background: #153f50;
+  background: var(--berkeley-blue-mid);
 }
 
 .btn-ghost {
-  background: transparent;
-  color: var(--ink);
-  border-color: var(--line);
+  background: var(--card);
+  color: var(--berkeley-blue);
+  border-color: rgba(0, 50, 98, 0.16);
+}
+
+.btn-ghost:hover {
+  background: var(--california-gold-soft);
+  color: var(--berkeley-blue);
+  border-color: rgba(196, 130, 14, 0.25);
 }
 
 .hero-aside {
@@ -270,11 +313,6 @@ a:hover {
   box-shadow: var(--shadow);
 }
 
-.stat-card.accent {
-  background: linear-gradient(135deg, var(--accent-soft), #fffdf9);
-  border-color: rgba(26, 79, 99, 0.15);
-}
-
 .stat-label {
   display: block;
   margin-bottom: 0.35rem;
@@ -287,10 +325,50 @@ a:hover {
 
 .stat-card p {
   margin: 0;
+  color: var(--ink);
+  line-height: 1.5;
 }
 
-.stat-card strong {
-  color: var(--highlight);
+/* Focus card — subtle blue wash */
+.stat-focus {
+  background: linear-gradient(135deg, #f4f8fc, var(--card));
+  border-color: rgba(0, 50, 98, 0.12);
+}
+
+.stat-focus .stat-label {
+  color: var(--berkeley-blue-mid);
+}
+
+/* Berkeley education card */
+.stat-berkeley {
+  background: linear-gradient(135deg, #e8f1fa 0%, #f7fafd 55%, var(--card) 100%);
+  border: 1px solid rgba(0, 50, 98, 0.16);
+  border-left: 4px solid var(--berkeley-blue);
+  box-shadow: 0 8px 24px rgba(0, 50, 98, 0.1);
+}
+
+.stat-berkeley .stat-label {
+  color: var(--berkeley-blue);
+}
+
+.stat-berkeley p {
+  font-family: var(--serif);
+  font-size: 1.02rem;
+}
+
+/* Recent impact — ice blue + gold metrics */
+.stat-impact {
+  background: linear-gradient(145deg, var(--impact-soft) 0%, #edf4fa 45%, #f8fbfd 100%);
+  border: 1px solid rgba(59, 126, 161, 0.22);
+  box-shadow: 0 8px 28px rgba(59, 126, 161, 0.12);
+}
+
+.stat-impact .stat-label {
+  color: var(--berkeley-blue-light);
+}
+
+.stat-impact .text-gold {
+  font-size: 1.05em;
 }
 
 /* Sections */
@@ -321,15 +399,16 @@ a:hover {
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: var(--highlight);
+  color: var(--california-gold-deep);
 }
 
 .section h2 {
   margin: 0;
   font-family: var(--serif);
   font-size: clamp(1.9rem, 3vw, 2.6rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.15;
+  color: var(--berkeley-blue);
 }
 
 .section-intro {
@@ -377,6 +456,11 @@ a:hover {
   border-radius: var(--radius);
   padding: 1.25rem 1.35rem;
   box-shadow: var(--shadow);
+  transition: border-color 0.15s ease;
+}
+
+.timeline-item:hover {
+  border-color: rgba(0, 50, 98, 0.2);
 }
 
 @media (min-width: 760px) {
@@ -390,8 +474,8 @@ a:hover {
 .timeline-meta time {
   display: block;
   font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--accent);
+  font-weight: 700;
+  color: var(--berkeley-blue-mid);
   line-height: 1.4;
 }
 
@@ -399,18 +483,24 @@ a:hover {
   margin: 0 0 0.2rem;
   font-size: 1.12rem;
   line-height: 1.35;
+  color: var(--berkeley-blue);
 }
 
 .org {
   margin: 0 0 0.75rem;
-  color: var(--ink-muted);
+  color: var(--berkeley-blue-light);
   font-size: 0.95rem;
+  font-weight: 600;
 }
 
 .timeline-body ul {
   margin: 0;
   padding-left: 1.1rem;
   color: var(--ink-muted);
+}
+
+.timeline-body li::marker {
+  color: var(--california-gold);
 }
 
 .timeline-body li + li {
@@ -439,6 +529,12 @@ a:hover {
   border-radius: calc(var(--radius) + 2px);
   padding: 1.35rem;
   box-shadow: var(--shadow);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-card:hover {
+  border-color: rgba(0, 50, 98, 0.18);
+  box-shadow: 0 14px 36px rgba(0, 50, 98, 0.1);
 }
 
 .project-type {
@@ -448,7 +544,7 @@ a:hover {
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--highlight);
+  color: var(--california-gold-deep);
 }
 
 .project-header h3 {
@@ -456,6 +552,7 @@ a:hover {
   font-family: var(--serif);
   font-size: 1.45rem;
   line-height: 1.2;
+  color: var(--berkeley-blue);
 }
 
 .project-problem,
@@ -467,7 +564,7 @@ a:hover {
 
 .project-problem strong,
 .project-solution strong {
-  color: var(--ink);
+  color: var(--berkeley-blue);
 }
 
 .project-metrics {
@@ -475,9 +572,9 @@ a:hover {
   gap: 0.65rem;
   margin: 0 0 1rem;
   padding: 0.85rem;
-  background: var(--bg);
+  background: linear-gradient(145deg, var(--impact-soft), #f5f9fc);
   border-radius: 10px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(59, 126, 161, 0.18);
 }
 
 .project-metrics div {
@@ -490,7 +587,7 @@ a:hover {
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--ink-muted);
+  color: var(--berkeley-blue-light);
 }
 
 .project-metrics dd {
@@ -498,6 +595,11 @@ a:hover {
   font-weight: 600;
   color: var(--ink);
   font-size: 0.92rem;
+}
+
+.project-metrics .metric-highlight {
+  color: var(--california-gold-deep);
+  font-weight: 700;
 }
 
 .tag-row {
@@ -509,20 +611,22 @@ a:hover {
 
 .tag-row span {
   font-size: 0.76rem;
-  font-weight: 600;
+  font-weight: 700;
   padding: 0.25rem 0.55rem;
   border-radius: 999px;
-  background: var(--accent-soft);
-  color: var(--accent);
+  background: rgba(0, 50, 98, 0.08);
+  color: var(--berkeley-blue);
 }
 
 .project-link {
   margin-top: auto;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
+  color: var(--berkeley-blue-mid);
 }
 
 .project-link:hover {
+  color: var(--california-gold-deep);
   text-decoration: underline;
 }
 
@@ -548,11 +652,13 @@ a:hover {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 10px;
+  border-left: 3px solid var(--berkeley-blue);
 }
 
 .skill-grid strong {
   display: block;
   margin-bottom: 0.2rem;
+  color: var(--berkeley-blue);
 }
 
 .skill-grid span {
@@ -562,8 +668,12 @@ a:hover {
 
 .cert {
   margin: 1.25rem 0 0;
+  padding: 0.85rem 1rem;
   font-size: 0.92rem;
   color: var(--ink-muted);
+  background: var(--california-gold-soft);
+  border-radius: 10px;
+  border: 1px solid rgba(196, 130, 14, 0.2);
 }
 
 /* Contact */
@@ -576,10 +686,11 @@ a:hover {
   display: grid;
   gap: 1.5rem;
   padding: 2rem;
-  background: linear-gradient(135deg, var(--accent), #0f3544);
+  background: linear-gradient(135deg, var(--berkeley-blue) 0%, #0a2848 100%);
   color: #f4f8fa;
   border-radius: calc(var(--radius) + 4px);
   box-shadow: var(--shadow);
+  border-bottom: 4px solid var(--california-gold);
 }
 
 @media (min-width: 700px) {
@@ -593,16 +704,17 @@ a:hover {
   margin: 0.25rem 0 0.75rem;
   font-family: var(--serif);
   font-size: 2.2rem;
-  font-weight: 400;
+  font-weight: 700;
+  color: #fff;
 }
 
 .contact-grid p {
   margin: 0;
-  color: rgba(244, 248, 250, 0.85);
+  color: rgba(244, 248, 250, 0.88);
 }
 
 .contact-grid .section-num {
-  color: rgba(244, 248, 250, 0.65);
+  color: var(--california-gold);
 }
 
 .contact-links {
@@ -612,14 +724,13 @@ a:hover {
 
 .contact-links a {
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   font-size: 1.05rem;
 }
 
 .contact-links a:hover {
-  text-decoration: underline;
-  color: #fff;
+  color: var(--california-gold);
 }
 
 /* Footer */
@@ -627,10 +738,22 @@ a:hover {
 .site-footer {
   padding: 1.5rem 0 2rem;
   border-top: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.45);
 }
 
 .site-footer p {
   margin: 0;
   font-size: 0.88rem;
   color: var(--ink-muted);
+}
+
+.site-footer p::before {
+  content: "";
+  display: inline-block;
+  width: 0.55rem;
+  height: 0.55rem;
+  margin-right: 0.45rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--berkeley-blue), var(--california-gold));
+  vertical-align: middle;
 }
