@@ -5,404 +5,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="David Godinez — public sector analyst supporting equitable economic opportunity through program operations, data integrity, and process innovation."
+      content="David Godinez — public sector analyst. Program operations, fiscal systems, and workplace automation."
     />
-    <title>David Godinez — Public Sector & Program Analysis</title>
+    <title>David Godinez</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page">
+      <header class="site-header">
+        <div class="header-top">
+          <h1 class="wordmark">David Godinez</h1>
+          <div class="header-contact">
+            <a href="mailto:godinez_david@lacoe.edu">godinez_david@lacoe.edu</a>
+            <a href="https://github.com/davidgo24" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+        <p class="tagline">Public sector analyst · LA County · Bilingual (EN / ES)</p>
+      </header>
 
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="wordmark" href="#">David <span class="wordmark-accent">Godinez</span></a>
-        <nav class="site-nav" aria-label="Primary">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact" class="nav-cta">Contact</a>
-        </nav>
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="mobile-nav"
-        >
-          Menu
+      <nav class="tab-nav" aria-label="Sections">
+        <button class="tab is-active" type="button" data-panel="about" aria-selected="true">
+          About
         </button>
-      </div>
-      <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile" hidden>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <button class="tab" type="button" data-panel="resume" aria-selected="false">Resume</button>
+        <button class="tab" type="button" data-panel="projects" aria-selected="false">
+          Projects
+        </button>
       </nav>
-    </header>
 
-    <main id="main">
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Los Angeles County · Bilingual (English / Spanish)</p>
-            <h1>
-              Turning complex programs into
-              <em>clear systems</em> people can rely on.
-            </h1>
-            <p class="lede">
-              Public sector analyst with experience in community economic programs,
-              fiscal operations, and stakeholder coordination. I build practical tools
-              and documentation that help teams deliver accurate outcomes under
-              deadline pressure.
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#projects">View selected work</a>
-              <a
-                class="btn btn-ghost"
-                href="https://github.com/davidgo24"
-                target="_blank"
-                rel="noopener noreferrer"
-                >GitHub</a
-              >
-            </div>
-          </div>
-          <aside class="hero-aside" aria-label="At a glance">
-            <div class="stat-card stat-focus">
-              <span class="stat-label">Focus</span>
-              <p>
-                <span class="text-ink">Program analysis</span> · fiscal compliance ·
-                process improvement
-              </p>
-            </div>
-            <div class="stat-card stat-berkeley">
-              <span class="stat-label">Education</span>
-              <p>
-                <strong class="text-ink">UC Berkeley</strong> —
-                <span class="text-gold">B.A. Legal Studies</span>
-              </p>
-            </div>
-            <div class="stat-card stat-impact">
-              <span class="stat-label">Recent impact</span>
-              <p>
-                <strong class="text-gold">100+ hours</strong> saved annually on municipal
-                payroll workflows through custom automation
-              </p>
-            </div>
-          </aside>
-        </div>
-      </section>
+      <main class="panel-area">
+        <section id="panel-about" class="panel is-visible" aria-labelledby="tab-about">
+          <p class="lead">
+            I support payroll, HR, and finance systems for public agencies — and build
+            small tools when the workflow needs one. Research the problem, fix it, document
+            it.
+          </p>
+          <ul class="chips">
+            <li class="chip chip-gold">
+              <span class="chip-label">Education</span>
+              <span class="chip-value">UC Berkeley · B.A. Legal Studies</span>
+            </li>
+            <li class="chip">
+              <span class="chip-label">Focus</span>
+              <span class="chip-value">Program analysis · ERP · compliance</span>
+            </li>
+            <li class="chip chip-gold">
+              <span class="chip-label">Recent impact</span>
+              <span class="chip-value"><strong>100+ hrs/yr</strong> saved on payroll workflows</span>
+            </li>
+          </ul>
+        </section>
 
-      <section id="about" class="section">
-        <div class="container split">
-          <div class="section-label">
-            <span class="section-num">01</span>
-            <h2>About</h2>
-          </div>
-          <div class="section-body">
-            <p>
-              I work at the intersection of public service and operational analysis —
-              supporting payroll, HR, and finance systems for school districts and
-              municipal agencies while writing the procedural guides teams actually use.
-            </p>
-            <p>
-              My path spans community banking and financial literacy outreach, foreign
-              exchange analysis, municipal ERP support, and large-scale HR/payroll
-              migrations. Across each role, the through-line is the same: research a
-              problem, recommend a fix, and build systems that hold up under audit and
-              real-world pressure.
-            </p>
-            <p>
-              Outside my day job, I teach myself to code to build efficient workplace
-              tools — always in service of accuracy, compliance, and time returned to
-              the people doing the work. I am committed to equitable economic
-              opportunity and helping local organizations run stronger programs with
-              fewer bottlenecks.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="experience" class="section section-muted">
-        <div class="container">
-          <div class="section-label centered">
-            <span class="section-num">02</span>
-            <h2>Public service experience</h2>
-            <p class="section-intro">
-              Selected roles aligned with program analysis, fiscal operations, and
-              community impact.
-            </p>
-          </div>
-
-          <ol class="timeline">
-            <li class="timeline-item">
-              <div class="timeline-meta">
+        <section id="panel-resume" class="panel" hidden aria-labelledby="tab-resume">
+          <ol class="resume-list">
+            <li>
+              <div class="resume-head">
+                <h2>Administrative Specialist — HR &amp; Payroll Apps Support</h2>
                 <time datetime="2026-04">Apr 2026 — Present</time>
               </div>
-              <div class="timeline-body">
-                <h3>Administrative Specialist — HR &amp; Payroll Applications Support</h3>
-                <p class="org">Los Angeles County Office of Education, Technology Services</p>
-                <ul>
-                  <li>Primary on-site functional specialist during a high-stakes payroll and HR ERP migration for school districts.</li>
-                  <li>Configure salary tables, benefit structures, and system parameters; author ERP desktop manuals and procedural guides.</li>
-                  <li>First line of defense during phased rollouts — audit mapping errors and resolve live payroll discrepancies.</li>
-                </ul>
-              </div>
+              <p class="resume-org">LA County Office of Education, Technology Services</p>
+              <p>On-site ERP specialist during school-district payroll &amp; HR migration.</p>
             </li>
-            <li class="timeline-item">
-              <div class="timeline-meta">
+            <li>
+              <div class="resume-head">
+                <h2>Finance Technician</h2>
                 <time datetime="2026-01/2026-04">Jan — Apr 2026</time>
               </div>
-              <div class="timeline-body">
-                <h3>Finance Technician</h3>
-                <p class="org">City of Montebello, Transit Department</p>
-                <ul>
-                  <li>Managed system access and identity permissions across Tyler New World ERP, TimeClock Plus, and Optibus.</li>
-                  <li>Audited biweekly records for 130 transit employees; resolved database discrepancies under strict payroll deadlines.</li>
-                  <li>Partnered with management to optimize data flow between timekeeping hardware and the core ERP — reducing processing exceptions.</li>
-                </ul>
-              </div>
+              <p class="resume-org">City of Montebello, Transit Department</p>
+              <p>Payroll data for 130 employees; ERP access control &amp; workflow optimization.</p>
             </li>
-            <li class="timeline-item">
-              <div class="timeline-meta">
+            <li>
+              <div class="resume-head">
+                <h2>Accounting Technician</h2>
                 <time datetime="2025-01/2025-06">Jan — Jun 2025</time>
               </div>
-              <div class="timeline-body">
-                <h3>Accounting Technician (Finance Department)</h3>
-                <p class="org">City of Manhattan Beach</p>
-                <ul>
-                  <li>Functional power-user of Tyler Munis ERP across Police and Community Development departments.</li>
-                  <li>Daily bank reconciliations and automated cash reporting; coordinated vendor payment tracking and database inquiries.</li>
-                </ul>
-              </div>
+              <p class="resume-org">City of Manhattan Beach, Finance</p>
+              <p>Tyler Munis ERP support, bank reconciliations, vendor payment tracking.</p>
             </li>
-            <li class="timeline-item">
-              <div class="timeline-meta">
+            <li>
+              <div class="resume-head">
+                <h2>Foreign Currency Analyst</h2>
+                <time datetime="2022-06/2023-09">Jun 2022 — Sep 2023</time>
+              </div>
+              <p class="resume-org">City National Bank</p>
+              <p>FX market analysis; spot, forward, and swap transaction execution.</p>
+            </li>
+            <li>
+              <div class="resume-head">
+                <h2>Community Outreach Banker</h2>
                 <time datetime="2017-03/2022-07">Mar 2017 — Jul 2022</time>
               </div>
-              <div class="timeline-body">
-                <h3>Community Outreach Banker</h3>
-                <p class="org">MUFG Union Bank</p>
-                <ul>
-                  <li>Reached 500+ financial literacy participants through workshops in LMI communities, aligned with CRA goals.</li>
-                  <li>Increased nonprofit outreach participation by 25%; recognized with the President's Award (2019).</li>
-                  <li>Guided first-time homebuyers through down payment assistance programs.</li>
-                </ul>
-              </div>
+              <p class="resume-org">MUFG Union Bank</p>
+              <p>500+ financial literacy participants; President's Award (2019).</p>
             </li>
           </ol>
-        </div>
-      </section>
+        </section>
 
-      <section id="projects" class="section">
-        <div class="container">
-          <div class="section-label centered">
-            <span class="section-num">03</span>
-            <h2>Selected work</h2>
-            <p class="section-intro">
-              Operational tools built to strengthen payroll accuracy, audit readiness,
-              and team coordination — not commercial products.
-            </p>
-          </div>
-
-          <div class="project-grid">
-            <article class="project-card">
-              <div class="project-header">
-                <span class="project-type">Internal tool · Python / Flask</span>
-                <h3>Time Exception Slip Automation</h3>
+        <section id="panel-projects" class="panel" hidden aria-labelledby="tab-projects">
+          <ul class="project-list">
+            <li class="project-item">
+              <div class="project-top">
+                <h2>Time Exception Slip Automation</h2>
+                <span class="project-stat">4+ hrs → ~20 min / pay period</span>
               </div>
-              <p class="project-problem">
-                <strong>Problem:</strong> ~128 transit employees required hand-filled
-                Time Exception Slips every pay period — names, IDs, OT hours, Excel
-                summaries. Four-plus hours of repetitive work with real risk of typos
-                and payroll mismatches.
-              </p>
-              <p class="project-solution">
-                <strong>What I built:</strong> A browser-based tool that generates
-                pre-filled slip PDFs, handles biweekly OT entry with live validation,
-                and exports a formatted Excel summary for Finance — all in one workflow.
-                Data stays local; no server storage required.
-              </p>
-              <dl class="project-metrics">
-                <div>
-                  <dt>Time per pay period</dt>
-                  <dd class="metric-highlight">4+ hrs → ~20 min</dd>
-                </div>
-                <div>
-                  <dt>Annual savings</dt>
-                  <dd class="metric-highlight">100+ hours</dd>
-                </div>
-                <div>
-                  <dt>Accuracy</dt>
-                  <dd>Typos &amp; OT math errors eliminated</dd>
-                </div>
-              </dl>
-              <div class="tag-row">
-                <span>Python</span>
-                <span>Flask</span>
-                <span>ReportLab</span>
-                <span>openpyxl</span>
+              <p>Pre-filled PDF slips &amp; OT Excel export for ~128 transit employees.</p>
+              <div class="project-meta">
+                <span>Python · Flask</span>
+                <a
+                  href="https://github.com/davidgo24/time-exception-slip-tool"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub →</a
+                >
               </div>
-              <a
-                class="project-link"
-                href="https://github.com/davidgo24/time-exception-slip-tool"
-                target="_blank"
-                rel="noopener noreferrer"
-                >View on GitHub →</a
-              >
-            </article>
-
-            <article class="project-card">
-              <div class="project-header">
-                <span class="project-type">Internal tool · Python / Flask</span>
-                <h3>DOS Data Entry CLI</h3>
+            </li>
+            <li class="project-item">
+              <div class="project-top">
+                <h2>DOS Data Entry CLI</h2>
+                <span class="project-stat">Keyboard-first TCP export</span>
               </div>
-              <p class="project-problem">
-                <strong>Problem:</strong> Days-of-Service (DOS) Excel reports needed
-                careful, segment-by-segment entry into TimeClock Plus — slow,
-                error-prone, and hard to track across a full operations roster.
-              </p>
-              <p class="project-solution">
-                <strong>What I built:</strong> A keyboard-first web UI for parsing DOS
-                files, selecting runs, applying labor codes (REG, GUAR, OT1.5, CTE),
-                and exporting TCP-ready CSV rows. Progress tracking and per-user
-                sessions let coworkers work independently on their own machines.
-              </p>
-              <dl class="project-metrics">
-                <div>
-                  <dt>Workflow</dt>
-                  <dd>Upload → review → export</dd>
-                </div>
-                <div>
-                  <dt>Designed for</dt>
-                  <dd>Transit ops &amp; payroll teams</dd>
-                </div>
-                <div>
-                  <dt>Approach</dt>
-                  <dd>Keyboard-first, audit-friendly</dd>
-                </div>
-              </dl>
-              <div class="tag-row">
-                <span>Python</span>
-                <span>Flask</span>
-                <span>Excel parsing</span>
-                <span>TCP export</span>
+              <p>Parse DOS Excel reports and export TimeClock Plus-ready segments.</p>
+              <div class="project-meta">
+                <span>Python · Flask</span>
+                <a
+                  href="https://github.com/davidgo24/dos_data_entry_cli"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub →</a
+                >
               </div>
-              <a
-                class="project-link"
-                href="https://github.com/davidgo24/dos_data_entry_cli"
-                target="_blank"
-                rel="noopener noreferrer"
-                >View on GitHub →</a
-              >
-            </article>
-
-            <article class="project-card">
-              <div class="project-header">
-                <span class="project-type">Internal automation · Microsoft 365</span>
-                <h3>Missing Time Exception Slip — Automated Outreach</h3>
+            </li>
+            <li class="project-item">
+              <div class="project-top">
+                <h2>Missing Slip — Automated Outreach</h2>
+                <span class="project-stat">M365 low-code</span>
               </div>
-              <p class="project-problem">
-                <strong>Problem:</strong> Chasing missing time exception slips meant
-                back-and-forth messages, unclear ownership, and risk to payroll
-                accuracy, audit trails, and compliance.
-              </p>
-              <p class="project-solution">
-                <strong>What I built:</strong> A low-code flow using SharePoint,
-                Microsoft Lists, Power Automate, and Outlook. When a slip is missing,
-                the operations manager receives a structured email with employee name,
-                date out, leave bank, and time — with key transit administration
-                teammates CC'd for visibility. Minimal custom code; relies on M365
-                automation the department already owns.
-              </p>
-              <dl class="project-metrics">
-                <div>
-                  <dt>Designed for</dt>
-                  <dd>Ops manager &amp; payroll workflow</dd>
-                </div>
-                <div>
-                  <dt>Outcome</dt>
-                  <dd>Documented requests, referable list</dd>
-                </div>
-                <div>
-                  <dt>Impact</dt>
-                  <dd>Fewer loops before pay period close</dd>
-                </div>
-              </dl>
-              <div class="tag-row">
-                <span>SharePoint</span>
-                <span>Power Automate</span>
-                <span>Microsoft Lists</span>
-                <span>Outlook</span>
+              <p>Power Automate flow emails ops manager when a time exception slip is missing.</p>
+              <div class="project-meta">
+                <span>SharePoint · Power Automate · Outlook</span>
+                <span class="project-internal">Internal · Montebello Transit</span>
               </div>
-              <p class="project-note">Built internally for municipal transit administration.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+            </li>
+          </ul>
+        </section>
+      </main>
 
-      <section class="section section-muted">
-        <div class="container split">
-          <div class="section-label">
-            <span class="section-num">04</span>
-            <h2>Toolkit</h2>
-          </div>
-          <div class="section-body">
-            <ul class="skill-grid">
-              <li>
-                <strong>Analysis &amp; reporting</strong>
-                <span>Advanced Excel · SQL (MySQL) · Python · R</span>
-              </li>
-              <li>
-                <strong>Systems &amp; operations</strong>
-                <span>Tyler Munis · Tyler New World ERP · TimeClock Plus · payroll/HR migrations</span>
-              </li>
-              <li>
-                <strong>Automation</strong>
-                <span>Power Automate · SharePoint · procedural documentation</span>
-              </li>
-              <li>
-                <strong>Languages</strong>
-                <span>English · Spanish (speak, read, write)</span>
-              </li>
-            </ul>
-            <p class="cert">
-              Microsoft Excel for Financial &amp; Accounting Professionals — Coursera (Dec 2024)
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section contact-section">
-        <div class="container contact-grid">
-          <div>
-            <span class="section-num">05</span>
-            <h2>Contact</h2>
-            <p>
-              Open to conversations about public sector program analysis, economic
-              development, and operational improvement across LA County.
-            </p>
-          </div>
-          <div class="contact-links">
-            <a href="mailto:godinez_david@lacoe.edu">godinez_david@lacoe.edu</a>
-            <a href="tel:+16264665679">(626) 466-5679</a>
-            <a href="https://github.com/davidgo24" target="_blank" rel="noopener noreferrer"
-              >github.com/davidgo24</a
-            >
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <p>© <span id="year"></span> David Godinez · Built for public service</p>
-      </div>
-    </footer>
+      <footer class="site-footer">
+        <p>© <span id="year"></span> David Godinez</p>
+        <a href="tel:+16264665679">(626) 466-5679</a>
+      </footer>
+    </div>
 
     <script src="./script.js"></script>
   </body>
