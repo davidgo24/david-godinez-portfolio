@@ -17,10 +17,11 @@
     <link rel="stylesheet" href="/david-godinez-portfolio/styles.css" />
   </head>
   <body>
+    <div class="focus-scrim" id="focus-scrim" aria-hidden="true"></div>
     <div class="grain" aria-hidden="true"></div>
 
-    <div class="shell">
-      <aside class="index" aria-label="Site index">
+    <div class="shell" id="shell">
+      <aside class="index" id="index-rail" aria-label="Site index">
         <div class="index-inner">
           <div class="index-brand">
             <span class="monogram" aria-hidden="true">DG</span>
@@ -52,7 +53,22 @@
         </div>
       </aside>
 
-      <main class="stage">
+      <main class="stage" id="stage">
+        <div class="stage-toolbar">
+          <button
+            type="button"
+            class="focus-toggle"
+            id="focus-toggle"
+            aria-pressed="false"
+            aria-label="Enter focus mode"
+          >
+            <span class="focus-toggle-icon" aria-hidden="true">◎</span>
+            <span class="focus-toggle-text">Focus</span>
+            <kbd class="focus-kbd">F</kbd>
+          </button>
+        </div>
+
+        <div class="stage-spotlight" id="stage-spotlight">
         <section id="panel-about" class="panel is-active" aria-labelledby="nav-about">
           <header class="panel-head">
             <p class="panel-eyebrow">01 — About</p>
@@ -202,8 +218,18 @@
         <footer class="stage-footer">
           <p>© <span id="year"></span> David Godinez · Bilingual EN / ES</p>
         </footer>
+        </div>
       </main>
     </div>
+
+    <nav class="focus-dock" id="focus-dock" aria-label="Focus navigation" hidden>
+      <button type="button" class="dock-item is-active" data-panel="about">01 About</button>
+      <button type="button" class="dock-item" data-panel="resume">02 Resume</button>
+      <button type="button" class="dock-item" data-panel="projects">03 Projects</button>
+      <button type="button" class="dock-exit" id="focus-exit" aria-label="Exit focus mode">
+        Esc
+      </button>
+    </nav>
 
     <script src="/david-godinez-portfolio/script.js"></script>
   </body>
